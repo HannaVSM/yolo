@@ -1,30 +1,32 @@
 <html>
 <body>
-<h1>INGRESAR</h1>
-<div class="contenedor">
-<div class="re">
-<form class="registro" (ngSubmit)="onRegister()" #myForm="ngForm">
-  <div class="input-group">
-    <label class="lblN" for="name">Nombre:</label>
-    <input class="input" type="text" name="name" required id="name" [(ngModel)]="register.name" />
-    <p *ngIf="register.name=== ''">El campo es requerido</p>
-  </div>
-  <div class="input-group">
-    <label class="lblE" for="email">Correo:</label>
-    <input class="input" type="email" name="email" required id="email" [(ngModel)]="register.email" />
-    <p *ngIf="register.email=== ''">El campo es requerido</p>
-  </div>
-  <div class="input-group">
-    <label class="lblP" for="password">Clave:</label>
-    <input class="input" type="password" name="password" required id="password" [(ngModel)]="register.password" />
-    <p *ngIf="register.password=== ''">El campo es requerido</p>
-  </div>
-  <button [disabled]="myForm.invalid" type="submit" [routerLink]="['/songs']">Registrar</button>
-</form>
-</div>
-<div class="astro">
-  <img [src]="image" alt="image">
-</div>
+<h1 class="tittle" style="font-weight: 600;">INGRESAR</h1>
+<div class="container-fluid vh-100">
+  <div class="row h-100">
+   <div class="col-lg-5" style="background-color: white;">
+    <form class="registro" (ngSubmit)="onRegister()" #myForm="ngForm">
+      <div class="input-group">
+        <label class="lblN" for="name">Nombre:</label>
+        <input class="input" type="text" name="name" required id="name" [(ngModel)]="register.name" />
+        <p *ngIf="register.name=== ''">El campo es requerido</p>
+      </div>
+      <div class="input-group">
+        <label class="lblE" for="email">Correo:</label>
+        <input class="input" type="email" name="email" required id="email" [(ngModel)]="register.email" />
+        <p *ngIf="register.email=== ''">El campo es requerido</p>
+      </div>
+      <div class="input-group">
+        <label class="lblP" for="password">Clave:</label>
+        <input class="input" type="password" name="password" required id="password" [(ngModel)]="register.password" />
+        <p *ngIf="register.password=== ''">El campo es requerido</p>
+      </div>
+      <button class="button" [disabled]="myForm.invalid" type="submit" [routerLink]="['/songs']">REGISTRAR</button>
+    </form>
+   </div>
+   <div class="col-lg-7" style="background-color: black;">
+    <img [src]="image" alt="image">
+   </div>
+ </div>
 </div>
 </body>
 </html>

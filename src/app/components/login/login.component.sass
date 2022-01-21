@@ -11,9 +11,9 @@ body
 .input
   width: 250px
   height: 25px
-  border-radius: 10px
   font-size: 10px
   box-shadow: 0 1px 1px rgba(23, 105, 229, 0.795)inset, 0 0 8px #0099ff99
+  margin-bottom: 20px
 
 .re
   height: 90vh
@@ -35,23 +35,22 @@ body
     max-width: 100%
     width: 80%
 
-
 .lblN
   top: 50%
   left: 50%
-  transform: translate(-50%, 50%)
+  transform: translate(-130%, 80%)
   margin-right: 25px
 
 .lblE
   top: 50%
   left: 50%
-  transform: translate(-50%, 50%)
+  transform: translate(-135%, 80%)
   margin-right: 33px
 
 .lblP
   top: 50%
   left: 50%
-  transform: translate(-50%, 50%)
+  transform: translate(-140%, 80%)
   margin-right: 40px
 
 .message-error
@@ -61,3 +60,27 @@ body
   transition: all linear .5s
   &.active
     opacity: 1
+
+.button
+  display: inline-block
+  padding: 15px 20px
+  font-size: 15px
+  cursor: pointer
+  text-align: center
+  text-decoration: none
+  font-family: 'Franklin Gothic Medium'
+  outline: none
+  color: #fff
+  background-color: rgb(52, 152, 219)
+  border: none
+  border-radius: 10px
+  box-shadow: 0 9px rgb(18, 67, 100)
+
+
+button:hover
+  background-color: rgb(25, 96, 144)
+
+button:active
+  background-color: rgb(25, 96, 144)
+  box-shadow: 0 5px rgb(18, 67, 100)
+  transform: translateY(4px)

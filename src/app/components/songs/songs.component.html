@@ -4,12 +4,12 @@
   <div class="product--grid">
     <div *ngFor="let song of songs">
       <img width="200" height="400" [src]="song.image" alt="image">
-      <h3 class="cantante">{{song.name}}</h3>
+      <h4 class="cantante">{{song.name}}</h4>
       <div class="box" (scroll)="onScroll($event)">
         <p [innerHTML]="song.letter"></p>
       </div>
       <input type="text" (keyup)="songName($event, song.id)"/>
-      <button *ngIf="nameCancion === song.cancion && idSong== song.id" [disabled]="verificarCancion()" (click)="increaseProgress()">Enviar</button>
+      <button type="submit" *ngIf="nameCancion === song.cancion && idSong== song.id" [disabled]="verificarCancion()" (click)="increaseProgress()" onclick="{disabled=true}">Enviar</button>
     </div>
   </div>
 </body>
