@@ -1,0 +1,15 @@
+<body class="fondo">
+<h1 class="title">Song Lyrics</h1>
+<div><progress max="7"  [value]="tantoPorCiento"></progress></div>
+  <div class="product--grid">
+    <div *ngFor="let song of songs">
+      <img width="200" height="400" [src]="song.image" alt="image">
+      <h3 class="cantante">{{song.name}}</h3>
+      <div class="box" (scroll)="onScroll($event)">
+        <p [innerHTML]="song.letter"></p>
+      </div>
+      <input type="text" (keyup)="songName($event, song.id)"/>
+      <button *ngIf="nameCancion === song.cancion && idSong== song.id" [disabled]="verificarCancion()" (click)="increaseProgress()">Enviar</button>
+    </div>
+  </div>
+</body>
